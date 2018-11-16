@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Memory Game</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            background-image: url('./img/bgg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            margin-left: 25%;
+            margin-top: 4%;
+        }
+
+        .box {
+            border: 1px solid black;
+            display: inline-block;
+            width: 110px;
+            height: 160px;
+            margin: 3px;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+            position: relative;
+        }
+
+        .front {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            border-radius: 5px;
+            /* display: none; */
+            /* padding: 5px; */
+        }
+
+        .back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class='container'>
+        <div class='box'>
+            <img class='front' src="./img/hanzo.png">
+            <img class='back' src="./img/cardsBack.jpg">
+        </div>
+        <div class='box'>
+            <img class='front' src="./img/hanzo.png">
+            <img class='back' src="./img/cardsBack.jpg">
+        </div>
+        <div class='box'>
+            <img class='front' src="./img/junkrat.png">
+            <img class='back' src="./img/cardsBack.jpg">
+        </div>
+        <div class='box'>
+            <img class='front' src="./img/junkrat.png">
+            <img class='back' src="./img/cardsBack.jpg">
+        </div>
+        <div class='box'>
+            <img class='front' src="./img/genji.png">
+            <img class='back' src="./img/cardsBack.jpg">
+        </div>
+        <div class='box'>
+            <img class='front' src="./img/genji.png">
+            <img class='back' src="./img/cardsBack.jpg">
+        </div>
+        <br>
+        <div class='box'>
+            <img class='front' src="./img/widow.png">
+            <img class='back' src="./img/cardsBack.jpg">
+        </div>
+        <div class='box'>
+            <img class='front' src="./img/widow.png">
+            <img class='back' src="./img/cardsBack.jpg">
+        </div>
+        <div class='box'>
+            <img class='front' src="./img/reaper.png">
+            <img class='back' src="./img/cardsBack.jpg">
+        </div>
+        <div class='box'>
+            <img class='front' src="./img/reaper.png">
+            <img class='back' src="./img/cardsBack.jpg">
+        </div>
+        <div class='box'>
+            <img class='front' src="./img/phara.png">
+            <img class='back' src="./img/cardsBack.jpg">
+        </div>
+        <div class='box'>
+            <img class='front' src="./img/phara.png">
+            <img class='back' src="./img/cardsBack.jpg">
+        </div>
+        <br>
+        <div class='box'>
+            <img class='front' src="./img/reinheart.png">
+            <img class='back' src="./img/cardsBack.jpg">
+        </div>
+        <div class='box'>
+            <img class='front' src="./img/reinheart.png">
+            <img class='back' src="./img/cardsBack.jpg">
+        </div>
+        <div class='box'>
+            <img class='front' src="./img/mccree.png">
+            <img class='back' src="./img/cardsBack.jpg">
+        </div>
+        <div class='box'>
+            <img class='front' src="./img/mccree.png">
+            <img class='back' src="./img/cardsBack.jpg">
+        </div>
+        <div class='box'>
+            <img class='front' src="./img/ana.png">
+            <img class='back' src="./img/cardsBack.jpg">
+        </div>
+        <div class='box'>
+            <img class='front' src="./img/ana.png">
+            <img class='back' src="./img/cardsBack.jpg">
+        </div>
+    </div>
+
+
+    <!-- importing jQuery -->
+    <!-- <script src="./js/lib/jquery-3.0.0.min.js"></script> -->
+    <!-- Our JS file-->
+    <script src="./mem.js"></script>
+</body>
+
+</html>
