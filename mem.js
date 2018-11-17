@@ -6,11 +6,13 @@ $(document).ready(function () {
 
 memory.game = function () {
     memory.card = $('.box');
-    memory.card.on('click',memory.flip);
+    console.log(memory.card);
+    memory.card.on('click',memory.choose);
 }
-memory.flip = function () {
-    var flip = $(this);
-    console.log(flip);
+memory.choose = function () {
+    var choose = $(this);
+    this.classList.toggle('flip');
+    console.log(choose);
     console.log('i was click')
 }
 
