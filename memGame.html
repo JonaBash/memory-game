@@ -32,11 +32,16 @@
             margin: 3px;
             position: relative;
             transform-style: preserve-3d;
-            transition:.5s;
+            transition: .5s;
         }
+
         .box.flip {
             transform: rotateY(180deg);
         }
+        .box.two {
+            transform: rotateY(180deg);
+        }
+
         .front {
             width: 100%;
             height: 100%;
@@ -53,7 +58,7 @@
             border-radius: 5px;
             backface-visibility: hidden;
             /* display: none; */
-            
+
         }
     </style>
 
@@ -62,77 +67,77 @@
 
 <body>
     <div class='container'>
-        <div class='box'>
+        <div class='box' id='cd0'>
             <img class='front' id='card1' src="./img/hanzo.png">
             <img class='back' src="./img/cardsBack.jpg">
         </div>
-        <div class='box'>
+        <div class='box' id='cd1'>
             <img class='front' id='card2' src="./img/hanzo.png">
             <img class='back' src="./img/cardsBack.jpg">
         </div>
-        <div class='box'>
+        <div class='box' id='cd2'>
             <img class='front' id='card3' src="./img/junkrat.png">
             <img class='back' src="./img/cardsBack.jpg">
         </div>
-        <div class='box'>
+        <div class='box' id='cd3'>
             <img class='front' id='card4' src="./img/junkrat.png">
             <img class='back' src="./img/cardsBack.jpg">
         </div>
-        <div class='box'>
+        <div class='box' id='cd4'>
             <img class='front' id='card5' src="./img/genji.png">
             <img class='back' src="./img/cardsBack.jpg">
         </div>
-        <div class='box'>
+        <div class='box' id='cd5'>
             <img class='front' id='card6' src="./img/genji.png">
             <img class='back' src="./img/cardsBack.jpg">
         </div>
         <br>
-        <div class='box'>
+        <div class='box' id='cd6'>
             <img class='front' id='card7' src="./img/widow.png">
             <img class='back' src="./img/cardsBack.jpg">
         </div>
-        <div class='box'>
+        <div class='box' id='cd7'>
             <img class='front' id='card8' src="./img/widow.png">
             <img class='back' src="./img/cardsBack.jpg">
         </div>
-        <div class='box'>
+        <div class='box' id='cd8'>
             <img class='front' id='card9' src="./img/reaper.png">
             <img class='back' src="./img/cardsBack.jpg">
         </div>
-        <div class='box'>
+        <div class='box' id='cd9'>
             <img class='front' id='card10' src="./img/reaper.png">
             <img class='back' src="./img/cardsBack.jpg">
         </div>
-        <div class='box'>
+        <div class='box' id='cd10'>
             <img class='front' id='card11' src="./img/phara.png">
             <img class='back' src="./img/cardsBack.jpg">
         </div>
-        <div class='box'>
+        <div class='box' id='cd11'>
             <img class='front' id='card12' src="./img/phara.png">
             <img class='back' src="./img/cardsBack.jpg">
         </div>
         <br>
-        <div class='box'>
+        <div class='box' id='cd12'>
             <img class='front' id='card13' src="./img/reinheart.png">
             <img class='back' src="./img/cardsBack.jpg">
         </div>
-        <div class='box'>
+        <div class='box' id='cd13'>
             <img class='front' id='card14' src="./img/reinheart.png">
             <img class='back' src="./img/cardsBack.jpg">
         </div>
-        <div class='box'>
+        <div class='box' id='cd14'>
             <img class='front' id='card15' src="./img/mccree.png">
             <img class='back' src="./img/cardsBack.jpg">
         </div>
-        <div class='box'>
+        <div class='box' id='cd15'>
             <img class='front' id='card16' src="./img/mccree.png">
             <img class='back' src="./img/cardsBack.jpg">
         </div>
-        <div class='box'>
+        <div class='box' id='cd16'>
             <img class='front' id='card17' src="./img/zarya.png">
             <img class='back' src="./img/cardsBack.jpg">
         </div>
-        <div class='box'>
+        <div class='box' id='cd17'>
             <img class='front' id='card18' src="./img/zarya.png">
             <img class='back' src="./img/cardsBack.jpg">
         </div>

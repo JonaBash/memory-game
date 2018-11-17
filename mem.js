@@ -7,16 +7,49 @@ $(document).ready(function () {
 
 memory.game = function () {
     memory.card = $('.box');
-    console.log(memory.card);
-    memory.card.on('click',memory.choose);
+    memory.card.on('click', memory.choose);
 }
+var clickCounter = 0;
+var winCounter = 0;
+var firstCheck;
+var secondCheck;
+var arrCheckFirst;
+var arrCheckSecond;
+var fc, sc;
 memory.choose = function () {
-    var choose = $(this);
     this.classList.toggle('flip');
-    console.log(choose);
-    console.log('i was click')
+    clickCounter ++;
+    
+    if (clickCounter == 1) {
+        fc = this;
+        firstCheck = $(this).attr('id');
+        arrCheckFirst = firstCheck.substring(2);
+        console.log(arrCheckFirst);
+    }
+    if (clickCounter == 2) {
+        sc = this;
+        $('.container').css('pointer-events', 'none');
+        secondCheck = $(this).attr('id');
+        arrCheckSecond = secondCheck.substring(2);
+        console.log(arrCheckSecond);        
+        if (cards[arrCheckFirst] === cards[arrCheckSecond]) {
+            winCounter ++;
+            fc.classList.add('two');
+            sc.classList.add('two');
+            console.log(winCounter);
+        }
+        if (winCounter == cards.length/2) {
+            $('.container').css('display','none');
+            $("body").append("<h1>You won!!!!</h1>");
+        }
+        setTimeout(function () {
+            $('.container').removeAttr('style', 'pointer-events');
+            fc.classList.remove('flip');
+            sc.classList.remove('flip');
+        }, 1000);
+        clickCounter = 0;
+    }
 }
-
 var cards = [
     "./img/hanzo.png",
     "./img/junkrat.png",
@@ -48,6 +81,6 @@ function shuffle(a) {
     return a;
 }
 shuffle(cards);
-for (var i = 0; i < cards.length; i ++){
-    $('#card'+(i+1)).attr('src',cards[i]);
+for (var i = 0; i < cards.length; i++) {
+    $('#card' + (i + 1)).attr('src', cards[i]);
 }
