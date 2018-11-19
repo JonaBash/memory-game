@@ -16,38 +16,44 @@ var secondCheck;
 var arrCheckFirst;
 var arrCheckSecond;
 var fc, sc;
+
 memory.choose = function () {
     this.classList.toggle('flip');
-    clickCounter ++;
-    
+    clickCounter++;
+
+
     if (clickCounter == 1) {
         fc = this;
+        $(this).css('pointer-events', 'none');
         firstCheck = $(this).attr('id');
         arrCheckFirst = firstCheck.substring(2);
         console.log(arrCheckFirst);
     }
     if (clickCounter == 2) {
+        $(fc).removeAttr('style', 'pointer-events');
         sc = this;
         $('.container').css('pointer-events', 'none');
         secondCheck = $(this).attr('id');
         arrCheckSecond = secondCheck.substring(2);
-        console.log(arrCheckSecond);        
+        console.log(arrCheckSecond);
         if (cards[arrCheckFirst] === cards[arrCheckSecond]) {
-            winCounter ++;
+            winCounter++;
             fc.classList.add('two');
             sc.classList.add('two');
             console.log(winCounter);
         }
-        if (winCounter == cards.length/2) {
-            $('.container').css('display','none');
-            $("body").append("<h1>You won!!!!</h1>");
-        }
+
         setTimeout(function () {
             $('.container').removeAttr('style', 'pointer-events');
             fc.classList.remove('flip');
             sc.classList.remove('flip');
         }, 1000);
         clickCounter = 0;
+    }
+
+    if (winCounter == cards.length / 2) {
+        $('.container').css('display', 'none');
+        $("body").append("<h1>You won!!!!</h1>");
     }
 }
 var cards = [
